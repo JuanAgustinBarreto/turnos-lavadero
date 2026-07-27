@@ -206,7 +206,7 @@ ${turno.nombre} ${turno.apellido}
 ${turno.vehiculo}
 
 *Patente:*
-${turno.patente}
+//${turno.patente}
 
 *Servicio:*
 ${servicio.nombre}
@@ -234,7 +234,7 @@ ${turno.observaciones || "Sin observaciones"}`;
       apellido:      $("#apellido").value.trim(),
       telefono:      $("#telefono").value.trim(),
       vehiculo:      $("#vehiculo").value.trim(),
-      patente:       $("#patente").value.trim().toUpperCase(),
+//      patente:       $("#patente").value.trim().toUpperCase(),
       servicio:      $("#servicio").value,
       fecha:         $("#fecha").value,
       hora:          $("#hora").value,
@@ -242,7 +242,7 @@ ${turno.observaciones || "Sin observaciones"}`;
     };
 
     // Validaciones
-    for(const k of ["nombre","apellido","telefono","vehiculo","patente","servicio","fecha","hora"]){
+    for(const k of ["nombre","apellido","telefono","vehiculo","servicio","fecha","hora"]){
       if(!data[k]){ showAlert("Completá todos los campos obligatorios."); return; }
     }
     if(data.fecha < fechaHoyISO()){ showAlert("La fecha no puede ser anterior a hoy."); return; }
