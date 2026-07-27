@@ -206,7 +206,7 @@ ${turno.nombre} ${turno.apellido}
 ${turno.vehiculo}
 
 *Patente:*
-//${turno.patente}
+${turno.patente}
 
 *Servicio:*
 ${servicio.nombre}
