@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JP Detailing — Turnos Premium</title>
+<meta name="description" content="Reservá tu turno en JP Detailing. Lavado premium, detailing y cuidado profesional de tu vehículo." />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">
+      <span class="logo-mark">JP</span>
+      <span class="logo-text">Detailing</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#reservar">Reservar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn-icon" href="https://instagram.com/jpdetailing" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <a class="btn-icon whatsapp" href="https://wa.me/5493435451818" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 003.6 17.3L2 22l4.9-1.6A11 11 0 1020.5 3.5zM12 20a8 8 0 01-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1112 20zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.1-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.2 3.6.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <span class="tag">Premium Auto Detailing</span>
+    <h1>Transformamos tu vehículo <span class="accent">como nuevo</span>.</h1>
+    <p>Servicio profesional de lavado y detailing. Reservá tu turno online en segundos.</p>
+    <div class="hero-actions">
+      <a href="#reservar" class="btn btn-primary">Reservar turno</a>
+      <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <h2>Nuestros <span class="accent">servicios</span></h2>
+      <p>Elegí el trabajo que necesitás para tu vehículo.</p>
+    </div>
+    <div class="services-grid" id="serviciosGrid"></div>
+  </div>
+</section>
+
+<!-- RESERVAR -->
+<section class="section section-dark" id="reservar">
+  <div class="container">
+    <div class="section-head">
+      <h2>Reservá tu <span class="accent">turno</span></h2>
+      <p>Completá el formulario y confirmá al instante.</p>
+    </div>
+
+    <form class="reserva-form" id="reservaForm" novalidate>
+      <div class="grid-2">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required />
+        </div>
+        <div class="field">
+          <label for="apellido">Apellido</label>
+          <input id="apellido" name="apellido" type="text" required />
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="tel" required />
+        </div>
+        <div class="field">
+          <label for="vehiculo">Vehículo</label>
+          <input id="vehiculo" name="vehiculo" type="text" placeholder="Ford Focus" required />
+        </div>
+        <div class="field">
+          <label for="patente">Patente</label>
+          <input id="patente" name="patente" type="text" placeholder="AB123CD" required />
+        </div>
+        <div class="field">
+          <label for="servicio">Servicio</label>
+          <select id="servicio" name="servicio" required>
+            <option value="">Seleccionar…</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fecha">Fecha</label>
+          <input id="fecha" name="fecha" type="date" required />
+        </div>
+        <div class="field">
+          <label for="hora">Hora</label>
+          <select id="hora" name="hora" required disabled>
+            <option value="">Seleccioná una fecha primero</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="observaciones">Observaciones</label>
+        <textarea id="observaciones" name="observaciones" rows="3" placeholder="Detalles adicionales (opcional)"></textarea>
+      </div>
+
+      <div class="calendar-block">
+        <h3>Disponibilidad del día</h3>
+        <div class="legend">
+          <span><i class="dot free"></i>Libre</span>
+          <span><i class="dot busy"></i>Ocupado</span>
+          <span><i class="dot selected"></i>Seleccionado</span>
+        </div>
+        <div class="slots" id="slots"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Confirmar turno</button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="container contact-grid">
+    <div>
+      <h2>Contacto</h2>
+      <p class="muted">Estamos para atenderte y dejar tu vehículo impecable.</p>
+      <ul class="contact-list">
+        <li><strong>Teléfono:</strong> +54 9 343 545-1818</li>
+        <li><strong>Dirección:</strong> Paraná, Entre Ríos</li>
+        <li><strong>Horarios:</strong> Lun a Sáb · 09:00–12:30 / 16:30–21:00</li>
+      </ul>
+      <div class="contact-actions">
+        <a href="https://wa.me/5493435451818" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://instagram.com/jpdetailing" class="btn btn-ghost" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-card-inner">
+        <span class="logo-mark big">JP</span>
+        <h3>JP Detailing</h3>
+        <p>Premium Auto Care</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year"></span> JP Detailing · Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- MODAL CONFIRMACION -->
+<div class="modal" id="modalConfirm" role="dialog" aria-hidden="true">
+  <div class="modal-backdrop"></div>
+  <div class="modal-card">
+    <div class="modal-check">✓</div>
+    <h3>¡Turno reservado correctamente!</h3>
+    <p class="muted">JP Detailing recibió tu solicitud.</p>
+    <ul class="resume" id="resume"></ul>
+    <div class="modal-actions">
+      <button class="btn btn-primary" id="modalClose">Listo</button>
+    </div>
+  </div>
+</div>
+
+<!-- ALERTA -->
+<div class="alert" id="alert" role="alert"></div>
+
+<!-- LOADING -->
+<div class="loading" id="loading" aria-hidden="true"><div class="spinner"></div></div>
+
+<script src="/script.js"></script>
+</body>
+</html>
