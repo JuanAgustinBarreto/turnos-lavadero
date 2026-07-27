@@ -173,3 +173,16 @@ img{max-width:100%;display:block}
   .header-actions .btn-icon:nth-child(1){display:none}
   .btn{padding:13px 20px;font-size:14px}
 }
+.logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+.contact-logo{
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    object-fit: contain;
+}
